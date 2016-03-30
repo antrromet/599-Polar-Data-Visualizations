@@ -15,8 +15,9 @@
         border: 1px solid #555555;
         border-radius: 5px 5px 5px 5px;
         font-size: 0.8em;
-        margin: 10px;
+        margin: 0px 100px 10px 100px;
         padding: 8px;
+        display: inline-block;
     }
     
     .bld {
@@ -26,7 +27,12 @@
 </style>
 
 <body>
-
+<div id="wrapper" style="text-align: center;">
+        <div class="legend">
+            <p>This visualization shows the important words in the documents in the form of a Word Cloud.</p>
+            <p>Commonly used words are larger and slightly faded in color. Less common words are smaller and darker.</p>
+        </div>
+    </div>
 </body>
 <script src="../js/jquery-1.12.1.min.js"></script>
 <script>
@@ -81,13 +87,4 @@
     });
 
 </script>
-
-<div style="width: 40%;">
-    <div class="legend">
-        Commonly used words are larger and slightly faded in color. Less common words are smaller and darker.
-    </div>
-
-</div>
-
-
 </html>

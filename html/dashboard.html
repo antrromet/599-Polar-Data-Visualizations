@@ -3,7 +3,8 @@
 <style>
     body {
         width: 1060px;
-        margin: 50px auto;
+        margin: 0px auto;
+        font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
     }
     
     path {
@@ -58,10 +59,25 @@
         align: right;
         width: 50px;
     }
+    
+    .info {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 0px 100px 10px 100px;
+        padding: 8px;
+        display: inline-block;
+    }
 
 </style>
 
 <body>
+    <div id="wrapper" style="text-align: center;">
+        <div class="info">
+            <p>This visualization indicates the duration spread of files between different mime types</p>
+            <p>The X axis of the histogram represents the duration in sec of the files.</p>
+        </div>
+    </div>
     <div id='dashboard'>
     </div>
     <script src="../js/d3.min.js"></script>

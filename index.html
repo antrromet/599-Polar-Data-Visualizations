@@ -1,4 +1,4 @@
-<html ng-app='app'>
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -42,7 +42,6 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a data-toggle="tab" href="#pie_chart">Pie Chart</a></li>
                     <li><a data-toggle="tab" href="#word_cloud">Word Cloud</a></li>
-                    <li><a data-toggle="tab" href="#collapsible_tree">Collapsible Tree</a></li>
                     <li><a data-toggle="tab" href="#us_state_map">US State Map</a></li>
                     <li><a data-toggle="tab" href="#collapsible_indented_tree">Collapsible Indented Tree</a></li>
                     <li><a data-toggle="tab" href="#dashboard">Dashboard</a></li>
@@ -52,24 +51,21 @@
     </nav>
     <div class="container-fluid">
 
-        <div class="tab-content" ng-controller="d3Controller">
+        <div class="tab-content">
             <div id="pie_chart" class="tab-pane fade in active">
-                <iframe ng-src="html/pie_chart.html" class="nob"></iframe>
+                <iframe src="html/pie_chart.html" class="nob"></iframe>
             </div>
             <div id="word_cloud" class="tab-pane fade">
-                <iframe ng-src="html/word_cloud.html" class="nob"></iframe>
-            </div>
-            <div id="collapsible_tree" class="tab-pane fade">
-                <iframe ng-src="html/collapsible_tree.html" class="nob"></iframe>
+                <iframe src="html/word_cloud.html" class="nob"></iframe>
             </div>
             <div id="us_state_map" class="tab-pane fade">
-                <iframe ng-src="html/us_state_map.html" class="nob"></iframe>
+                <iframe src="html/us_state_map.html" class="nob"></iframe>
             </div>
             <div id="collapsible_indented_tree" class="tab-pane fade">
-                <iframe ng-src="html/collapsible_indented_tree.html" class="nob"> </iframe>
+                <iframe src="html/collapsible_indented_tree.html" class="nob"> </iframe>
             </div>
             <div id="dashboard" class="tab-pane fade">
-                <iframe ng-src="html/dashboard.html" class="nob"> </iframe>
+                <iframe src="html/dashboard.html" class="nob"> </iframe>
             </div>
         </div>
     </div>
