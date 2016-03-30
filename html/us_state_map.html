@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
+    
+    body {
+        font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+    }
+    
     .state {
         fill: none;
         stroke: #a9a9a9;
@@ -57,10 +62,25 @@
         text-align: center;
         color: white;
     }
+    
+    .legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 20px 100px;
+        padding: 8px;
+        display: inline-block;
+    }
 
 </style>
 
 <body>
+    <div id="wrapper" style="text-align: center;">
+        <div class="legend">
+            <p>This visualization indicates the spread of various files and their mime types within each US State.</p>
+            <p>Black areas indicates there are no files, whereas the maroon area indicates a lot of files.</p>
+        </div>
+    </div>
     <div id="tooltip"></div>
     <!-- div to hold tooltip. -->
     <svg width="960" height="600" id="statesvg"></svg>

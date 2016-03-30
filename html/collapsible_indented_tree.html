@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
+    body {
+        font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+    }
     .node rect {
         cursor: pointer;
         fill: #fff;
@@ -19,10 +22,25 @@
         stroke: #9ecae1;
         stroke-width: 1.5px;
     }
+    
+    .legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 20px 100px;
+        padding: 8px;
+        display: inline-block;
+    }
 
 </style>
 
 <body>
+    <div id="wrapper" style="text-align: center;">
+        <div class="legend">
+            <p>This visualization indicates the various publication Companies along and the number of articles published in each Company in various years.</p>
+            <p>Inside PDF Files, there are different Companies under which the papers were published. Inside each Company, there are years in which the paper were published. And finally inside years there are the total number of papers published.</p>
+        </div>
+    </div>
     <script src="../js/d3.min.js"></script>
     <script>
         var margin = {
@@ -201,3 +219,4 @@
         }
 
     </script>
+</body>
