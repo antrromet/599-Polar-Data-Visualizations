@@ -28,21 +28,14 @@
 
 <body>
 <div id="wrapper" style="text-align: center;">
-        <div class="legend">
-            <p>This visualization shows the important words in the documents in the form of a Word Cloud.</p>
-            <p>Commonly used words are larger and slightly faded in color. Less common words are smaller and darker.</p>
-        </div>
+    <div class="legend">
+        <p>This visualization shows the important words in the documents in the form of a Word Cloud.</p>
+        <p>Commonly used words are larger and slightly faded in color. Less common words are smaller and darker.</p>
     </div>
+</div>
 </body>
 <script src="../js/jquery-1.12.1.min.js"></script>
 <script>
-    var t = window.location.search.substring(window.location.search.indexOf('t=') + 2);
-    if (t.indexOf('&') >= 0) {
-        barChartJson = t.substring(t.indexOf('&') + 6);
-    }
-    //    var frequency_list = $.parseJSON(decodeURIComponent(barChartJson));
-
-
     d3.json("../data_files/word_cloud_data.json", function(error, frequency_list) {
         if (error) throw error;
         var color = d3.scale.linear()
