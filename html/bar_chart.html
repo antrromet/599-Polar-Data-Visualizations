@@ -87,10 +87,10 @@
                 if (error) throw error;
 
                 x.domain(data.map(function(d) {
-                    return d.range;
+                    return d.Range;
                 }));
                 y.domain([0, d3.max(data, function(d) {
-                    return d.frequency;
+                    return d.Frequency;
                 })]);
 
                 svg.append("g")
@@ -113,20 +113,20 @@
                     .enter().append("rect")
                     .attr("class", "bar")
                     .attr("x", function(d) {
-                        return x(d.range);
+                        return x(d.Range);
                     })
                     .attr("width", x.rangeBand())
                     .attr("y", function(d) {
-                        return y(d.frequency);
+                        return y(d.Frequency);
                     })
                     .attr("height", function(d) {
-                        return height - y(d.frequency);
+                        return height - y(d.Frequency);
                     });
             });
         }
 
         function type(d) {
-            d.frequency = +d.frequency;
+            d.Frequency = +d.Frequency;
             return d;
         }
 
@@ -136,7 +136,6 @@
             d3.select("select#mime_type").on("change", function() {
                 mime_type = this.value;
                 path = "../data_files/bar_chart_data/" + mime_type + "_data.tsv";
-                console.log("PATH: " + path);
                 main(path);
             });
 
