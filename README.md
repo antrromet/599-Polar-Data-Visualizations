@@ -29,6 +29,9 @@ We worked with the same dataset as the previous assignment (More details about t
 9. We also used the [EXIFTool](http://wiki.apache.org/tika/EXIFToolParser) to fetch relevant information from the video files. The information we fetched was `Avg Bitrate`, `Time Scale`, `File Size`, `Media Duration`, `Video Frame Rate`, `File Type Extension`, `Compressor ID`, `Movie Data Size`, `Megapixels`, `Image Size`, `Image Width`, `Bit Depth`, `X Resolution`, `Image Height`, `Y Resolution`, `Movie Data Offset`.
 
 ## Learnings
+
+### NOTE: In the original website, we have connected it to Solr index. So the user can dynamically give a query field and the results will dynamically change. Unfortunately, Github pages support only static pages as of now, so all the visualizations in this website are with the complete dataset. We are fetching all the records from Solr index.
+
 We used the following visualizations:
 
 1. [Pie Chart](http://antrromet.github.io/Polar-Data-Visualizations/#pie_chart): This was the simplest D3 visualization that simply told about the different mime types that were fetched from the Solr query.
