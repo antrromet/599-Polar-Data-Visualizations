@@ -30,7 +30,7 @@ We worked with the same dataset as the previous assignment (More details about t
 
 ## Learnings
 
-### NOTE: In the original website, we have connected it to Solr index. So the user can dynamically give a query field and the results will dynamically change. Unfortunately, Github pages support only static pages as of now, so all the visualizations in this website are with the complete dataset. We are fetching all the records from Solr index.
+**NOTE: In the original website, we have connected it to Solr index. So the user can dynamically give a query field and the results will dynamically change. Unfortunately, Github pages support only static pages as of now, so all the visualizations in this website are with the complete dataset. We are fetching all the records from Solr index.**
 
 We used the following visualizations:
 
