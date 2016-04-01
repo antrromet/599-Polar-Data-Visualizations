@@ -33,7 +33,7 @@
         <select id="mime_type">
             <option value="application_mp4">application/mp4</option>
             <option value="application_msword">application/msword</option>
-            <option value="application_octet_stream">application/octet stream</option>
+            <option value="application_octet-stream">application/octet stream</option>
             <option value="application_pdf">application/pdf</option>
             <option value="application_rss+xml">application/rss+xml</option>
             <option value="application_xhtml+xml">application/xhtml+xml</option>
@@ -75,7 +75,7 @@
             var yAxis = d3.svg.axis()
                 .scale(y)
                 .orient("left")
-                .ticks(10, "%");
+                .ticks(20);
 
             var svg = d3.select("body").append("svg")
                 .attr("width", width + margin.left + margin.right)
