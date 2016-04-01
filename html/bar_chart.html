@@ -87,7 +87,7 @@
                 if (error) throw error;
 
                 x.domain(data.map(function(d) {
-                    return d.byte;
+                    return d.range;
                 }));
                 y.domain([0, d3.max(data, function(d) {
                     return d.frequency;
@@ -113,7 +113,7 @@
                     .enter().append("rect")
                     .attr("class", "bar")
                     .attr("x", function(d) {
-                        return x(d.byte);
+                        return x(d.range);
                     })
                     .attr("width", x.rangeBand())
                     .attr("y", function(d) {
