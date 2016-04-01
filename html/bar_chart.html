@@ -23,11 +23,31 @@
     .x.axis path {
         display: none;
     }
+    
+    body {
+        font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+    }
+    
+    .legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 0px 100px 10px 100px;
+        padding: 8px;
+        display: inline-block;
+    }
 
 </style>
 
 <body>
 
+    <div id="wrapper" style="text-align: center;">
+        <div class="legend">
+            <p>This visualization indicates the file size distribution of the various mime types</p>
+            <p>The file size was normalized to be between 0-1 for all files and then the anove graphs were generated.</p>
+        </div>
+    </div>
+    
     <p>
         Mime Type:
         <select id="mime_type">
