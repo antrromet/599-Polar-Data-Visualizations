@@ -6,19 +6,19 @@ This is the website of my findings of the Scientific Content Enrichment of the T
 We worked with the same dataset as the previous assignment (More details about the same are given [here](https://github.com/antrromet/599-Mime-Diversity-Analysis)). In this assignment we did Content Extraction of Metadata, Information Clustering and Similarity and Named Entity Recognition to scientifically enrich the Polar dataset.
 
 1. We used [Tika](https://tika.apache.org/) to parse through the entire dataset and fetch the relevant keys from all the mime types. Now Tika itself gives you a lot of useful information about the files. It ranges from `title`, `description` in the `html` files to `channels`, `audioSampleRate` in `mp3` files. The exact keys that were fetched from Tika are given below.
-   * `application/mp4`: `xmpDM:duration`, `xmpDM:audioSampleRate`, `tiff:ImageLength`, `tiff:ImageWidth`
+   * **`application/mp4`**: `xmpDM:duration`, `xmpDM:audioSampleRate`, `tiff:ImageLength`, `tiff:ImageWidth`
    * `application/msword`: `comment`, `cp:subject`, `Last-Author`, `Application-Name`, `Author`, `Comments`, `Template`, `Company`, `Page-Count`, `Revision-Number`, `title`, `Word-Count`, `Character Count`
-   * `application/pdf`: `xmpMM:DocumentID`, `Author`, `tiff:ImageWidth`, `pdf:PDFVersion`, `xmpTPg:NPages`
-   * `application/rss+xml`: `description`, `title`
-   * `application/xhtml+xml`: `description`, `title`, `author`, `Content-Encoding`
-   * `application/xml`: `Content-Encoding`
-   * `audio/mpeg`: `channels`, `xmpDM:duration`, `xmpDM:audioSampleRate`, `xmpDM:audioCompressor`, `version`, `xmpDM:audioChannelType`, `samplerate`, `title`, `Author`, `xmpDM:releaseDate`, `xmpDM:album`, `xmpDM:trackNumber`, `xmpDM:genre`
-   * `image/gif`: `Chroma ColorSpaceType`, `Chroma NumChannels`, `Dimension ImageOrientation`, `height`, `width`, `Compression CompressionTypeName`
-   * `image/jpeg`: `File Size`, `X Resolution`, `Image Height`, `Number of Components`, `Image Width`, `File Name`, `Y Resolution`, `Data Precision`, `Resolution Units`, `tiff:BitsPerSample`
-   * `image/png`: `height`, `width`, `Chroma ColorSpaceType`, `Chroma NumChannels`, `Dimension PixelAspectRatio`
-   * `text/html`: `dc:title`, `DC.Publisher`, `DC.Publisher.Address`, `description`, `DC.Subject`, `orgcode`, `description`
-   * `text/plain`: `Content-Encoding`
-   * `video/quicktime`: `xmpDM:duration`, `xmpDM:audioSampleRate`, `tiff:ImageLength`, `tiff:ImageWidth` 
+   * **`application/pdf`**: `xmpMM:DocumentID`, `Author`, `tiff:ImageWidth`, `pdf:PDFVersion`, `xmpTPg:NPages`
+   * **`application/rss+xml`**: `description`, `title`
+   * **`application/xhtml+xml`**: `description`, `title`, `author`, `Content-Encoding`
+   * **`application/xml`**: `Content-Encoding`
+   * **`audio/mpeg`**: `channels`, `xmpDM:duration`, `xmpDM:audioSampleRate`, `xmpDM:audioCompressor`, `version`, `xmpDM:audioChannelType`, `samplerate`, `title`, `Author`, `xmpDM:releaseDate`, `xmpDM:album`, `xmpDM:trackNumber`, `xmpDM:genre`
+   * **`image/gif`**: `Chroma ColorSpaceType`, `Chroma NumChannels`, `Dimension ImageOrientation`, `height`, `width`, `Compression CompressionTypeName`
+   * **`image/jpeg`**: `File Size`, `X Resolution`, `Image Height`, `Number of Components`, `Image Width`, `File Name`, `Y Resolution`, `Data Precision`, `Resolution Units`, `tiff:BitsPerSample`
+   * **`image/png`**: `height`, `width`, `Chroma ColorSpaceType`, `Chroma NumChannels`, `Dimension PixelAspectRatio`
+   * **`text/html`**: `dc:title`, `DC.Publisher`, `DC.Publisher.Address`, `description`, `DC.Subject`, `orgcode`, `description`
+   * **`text/plain`**: `Content-Encoding`
+   * **`video/quicktime`**: `xmpDM:duration`, `xmpDM:audioSampleRate`, `tiff:ImageLength`, `tiff:ImageWidth` 
 2. We wrote a Tag Ratio Parser to identify the relevant information from the files. After that, we used the [OpenNLP](http://wiki.apache.org/tika/TikaAndNER) parser to extract NER from the files. The following entity types were extracted: `PERSON`, `LOCATION`, `ORAGANIZATION`, `DATE`, `TIME`, `PERCENT` and `MONEY`.
 3. We used [lstu](https://github.com/ldidry/lstu), which is a lightweight url shortner library, to create unique short urls for each file.
 4. We used [Grobid Journal Parser](http://wiki.apache.org/tika/GrobidJournalParser/) in Tika to extract the TEI annotations from the scientific publications in our dataset. We extracted the following TEI headers from teh Grobid parsers output: `Company`, `created`, `pdf:PDFVersion`, `xmpTPg:NPages`, `keywords`, `authors`, `title`. We also used the Google Scholar API to fetch relevant articles/publications.
